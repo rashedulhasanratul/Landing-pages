@@ -5,7 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Clone-Website</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="media-queries.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -24,7 +26,7 @@
       <a href="#" class="company-logo">
         <img src="./images/asset 1.png" alt="company logo" />
       </a>
-      <div class="nav-links">
+      <div class="nav-links" id="nav-links">
         <ul class="flex">
           <li><a href="#" class="hover-link">Products</a></li>
           <li><a href="#" class="hover-link">Customers</a></li>
@@ -34,6 +36,9 @@
           <li><a href="#" class="hover-link primary-button">Sign up</a></li>
         </ul>
       </div>
+      <a href="#" class="nav-toggle hover-link" id="nav-toggle">
+        <i class="fa-solid fa-bars"></i>
+      </a>
     </div>
   </nav>
 
@@ -81,44 +86,44 @@
     <div class="container">
       <div class="features-header">
         <h2 class="features-heading-text">Your user research Swiss Army knife</h2>
-        <a href="#" class="secondary-button ">See all features<i class="fa-solid fa-right-long"></i></a>
+        <a href="#" class="secondary-button ">See all features <i class="fa-solid fa-right-long"></i></a>
       </div>
       <div class="features-area flex">
         <div class="features-card flex">
           <img src="./images/asset 11.svg" alt="">
           <h3>Card Sorting</h3>
           <p>Discover how people group and label information</p>
-          <a href="#" class="secondary-button ">Learn More<i class="fa-solid fa-right-long"></i></a>
+          <a href="#" class="secondary-button ">Learn More <i class="fa-solid fa-right-long"></i></a>
         </div>
         <div class="features-card flex">
           <img src="./images/asset 13.svg" alt="">
           <h3>Prototype tests</h3>
           <p>Discover how people group and label information</p>
-          <a href="#" class="secondary-button ">Learn More<i class="fa-solid fa-right-long"></i></a>
+          <a href="#" class="secondary-button ">Learn More <i class="fa-solid fa-right-long"></i></a>
         </div>
         <div class="features-card flex">
           <img src="./images/asset 14.svg" alt="">
           <h3>First click tests</h3>
           <p>Discover how people group and label information</p>
-          <a href="#" class="secondary-button ">Learn More<i class="fa-solid fa-right-long"></i></a>
+          <a href="#" class="secondary-button ">Learn More <i class="fa-solid fa-right-long"></i></a>
         </div>
         <div class="features-card flex">
           <img src="./images/asset 15.svg" alt="">
           <h3>Design surveys</h3>
           <p>Discover how people group and label information</p>
-          <a href="#" class="secondary-button ">Learn More<i class="fa-solid fa-right-long"></i></a>
+          <a href="#" class="secondary-button ">Learn More <i class="fa-solid fa-right-long"></i></a>
         </div>
         <div class="features-card flex">
           <img src="./images/asset 16.svg" alt="">
           <h3>Preference tests</h3>
           <p>Discover how people group and label information</p>
-          <a href="#" class="secondary-button ">Learn More<i class="fa-solid fa-right-long"></i></a>
+          <a href="#" class="secondary-button ">Learn More <i class="fa-solid fa-right-long"></i></a>
         </div>
         <div class="features-card flex">
           <img src="./images/asset 17.svg" alt="">
           <h3>Five second tests</h3>
           <p>Discover how people group and label information</p>
-          <a href="#" class="secondary-button ">Learn More<i class="fa-solid fa-right-long"></i></a>
+          <a href="#" class="secondary-button ">Learn More <i class="fa-solid fa-right-long"></i></a>
         </div>
 
       </div>
@@ -141,7 +146,7 @@
     </div>
   </section>
   <section class="big-feature-section">
-    <div class="container flex big-feature-container" style="flex-direction: row-reverse;">
+    <div class="container flex big-feature-container" id="second-big-feature">
       <div class="feature-img">
         <img src="./images/asset 21.png" alt="">
       </div>
@@ -173,7 +178,7 @@
     <div class="container">
       <div class="examples-header flex">
         <h2 class="examples-heading-text">One platform, endless possibilities</h2>
-        <a href="#" class="secondary-button ">See more examples<i class="fa-solid fa-right-long"></i></a>
+        <a href="#" class="secondary-button ">See more examples <i class="fa-solid fa-right-long"></i></a>
       </div>
       <div class="examples-area flex">
         <a href="#" class="examples-card">
@@ -249,8 +254,17 @@
     </div>
   </div>
 
-  <!--this link is used for website's icon  -->
-  <script src="https://kit.fontawesome.com/e6d1aae13f.js" crossorigin="anonymous"></script>
-  
+  <!--js code for active menu bar  -->
+
+  <script>
+        const toggleButton = document.getElementById('nav-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        toggleButton.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        })
+
+    </script>
 </body>
+
 </html>
