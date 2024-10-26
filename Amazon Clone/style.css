@@ -1,4 +1,4 @@
-
+/* resets */
 *{
     margin: 0;
     font-family: Arial;
@@ -12,6 +12,8 @@
 }
 
 /* header section */
+
+/*topbar */
 
 .topbar{
     height: 60px;
@@ -283,13 +285,19 @@ footer{
     text-align: center;
     line-height: 20px;
     padding-block: 20px;
-
 }
 
 .foot-panel-four a{
     text-decoration: none;
     color: white;
     font-size: 0.85rem;
+}
+
+.option-pages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
 }
 .copy-right{
     font-size: 0.7rem;
